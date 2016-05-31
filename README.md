@@ -38,9 +38,9 @@ Pega a posição atual do dispositivo.
 
 Parametro | Tipo | Detalhes
 ------------ | ------------- | -------------
-Options | `GeolocationOptions` | As opções de geolocalização
+Options | `GeolocationOptions` | As [opções de geolocalização](https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions)
 
-**Retorna:** Uma `Promise` resolvida com a posição do dispositivo, ou rejeita com um erro.
+**Retorna:** Uma `Promise` resolvida com a [posição](https://developer.mozilla.org/en-US/docs/Web/API/Position) do dispositivo, ou rejeita com um erro.
 
 `getCurrentPosition(options)`
 
