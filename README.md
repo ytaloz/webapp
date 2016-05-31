@@ -8,7 +8,6 @@ Repositório:https://github.com/apache/cordova-plugin-geolocation
 Este plugin fornece informações sobre a localização do dispositivo, como a latitude e longitude. Fontes comuns de informação de localização incluindo o Sistema de Posicionamento Global (GPS) e localização inferida através de sinal de rede como o Endereço de IP, RFID, WiFi, Bluetooth, endereço de MAC e IDs de células GSM/CDMA. 
 
 
-
 Essa API é baseada na especificação da API de Geolocalização do W3C, e somente funciona em dispositivos que ainda não disponibilizam uma implementação.
 
 
@@ -40,3 +39,29 @@ Pega a posição atual do dispositivo.
 Parametro | Tipo | Detalhes
 ------------ | ------------- | -------------
 Options | `GeolocationOptions` | As opções de geolocalização
+
+**Retorna:** Uma `Promise` resolvida com a posição do dispositivo, ou rejeita com um erro.
+
+`getCurrentPosition(options)`
+
+
+Observa a posição atual do dispositivo. Para de observar alterações no `Observable` cancelando a assinatura.
+
+
+```javascript
+var subscription = Geolocation.watchPosition().subscribe(position => {
+  console.log(position.coords.longitude + ' ' + position.coords.latitude);
+});
+
+// To stop notifications
+subscription.unsubscribe();
+```
+
+Parametro | Tipo | Detalhes
+------------ | ------------- | -------------
+Options | `GeolocationOptions` | As opções de geolocalização
+
+**Retorna:** Retona um `Observable` que notifica com a posição do dispositivo, ou erros.
+
+
+
