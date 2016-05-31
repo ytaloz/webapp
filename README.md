@@ -59,7 +59,7 @@ subscription.unsubscribe();
 
 Parametro | Tipo | Detalhes
 ------------ | ------------- | -------------
-Options | `GeolocationOptions` | As opções de geolocalização
+Options | `GeolocationOptions` | As [opções de geolocalização](https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions)
 
 **Retorna:** Retona um `Observable` que notifica com a posição do dispositivo, ou erros.
 
